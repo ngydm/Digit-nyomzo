@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Digit_nyomzo
 {
-	internal class állapot
+	internal class EvidenceManager
 	{
-		private string statusz;
 	}
-
-
 }

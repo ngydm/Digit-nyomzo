@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,5 +23,11 @@ namespace Digit_nyomzo
 		public string Nev { get => nev; set => nev = value; }
 		public string Azonosito { get => azonosito; set => azonosito = value; }
 		public string Pozicio { get => pozicio; set => pozicio = value; }
+
+
+		public override string ToString()
+		{
+			return $"------------*Adatlap*-------------\n\t{this.nev}:\n\t{this.azonosito}\n\t{this.pozicio}";
+		}
 	}
 }

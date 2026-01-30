@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-			Console.WriteLine("ghnhg");
-			Console.WriteLine("fhfgdffgd");
+            Felhasznalo nyomzo1 = new Felhasznalo("Olág Sándor","CIG007007","nyomzó");
+			Console.WriteLine(nyomzo1);
         }
     }
 }

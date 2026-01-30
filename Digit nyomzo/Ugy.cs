@@ -13,9 +13,9 @@ namespace Digit_nyomzo
 		private string leiras;
 		private string allapot;
 		List<Felhasznalo> felhasznalok;
-		private List<string> bizonyitékok;
+		private List<Evidence> bizonyitékok;
 
-		public Ugy(int azonosito, string cim, string leiras, string allapot, List<Felhasznalo> felhasznalok, List<string> bizonyitékok)
+		public Ugy(int azonosito, string cim, string leiras, string allapot, List<Felhasznalo> felhasznalok, List<Evidence > bizonyitékok)
 		{
 			this.azonosito = azonosito;
 			this.cim = cim;
@@ -29,9 +29,12 @@ namespace Digit_nyomzo
 		public string Cim { get => cim; set => cim = value; }
 		public string Leiras { get => leiras; set => leiras = value; }
 		public string Allapot { get => allapot; set => allapot = value; }
-		public List<string> Bizonyitékok { get => bizonyitékok; set => bizonyitékok = value; }
+		public List<Evidence> Bizonyitékok { get => bizonyitékok; set => bizonyitékok = value; }
 		internal List<Felhasznalo> Felhasznalok { get => felhasznalok; set => felhasznalok = value; }
 
-
+		public override string ToString()
+		{
+			return $"{this.azonosito}-{this.cim}-{this.leiras}-{this.allapot}-{this.Bizonyitékok}-{this.felhasznalok}";
+		}
 	}
 }
