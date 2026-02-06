@@ -42,6 +42,26 @@ namespace Digit_nyomzo
 			bizonyitékok.Add(f);
 		}
 
+		public string BizonyitékokListázása()
+		{
+			string s = " ";
+			foreach(var item in bizonyitékok) 
+				{
+				s += item;
+				}
+			return s;
+		}
+
+		public string FelhaszánolListázása()
+		{
+			string s = " ";
+			foreach (var item in Felhasznalok)
+			{
+				s += item;
+			}
+			return s;
+		}
+
 
 		public void CaseStatus(string ujallapot) 
 		{
@@ -50,7 +70,7 @@ namespace Digit_nyomzo
 
 		public override string ToString()
 		{
-			return $"{this.azonosito}-{this.cim}-{this.leiras}-{this.allapot}-{this.Bizonyitékok}-{this.felhasznalok}";
+			return $"{this.azonosito}-{this.cim}-{this.leiras}-{this.allapot}-{this.BizonyitékokListázása()}-{this.FelhaszánolListázása()}";
 		}
 	}
 }
