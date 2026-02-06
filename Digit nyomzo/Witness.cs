@@ -10,17 +10,29 @@ namespace Digit_nyomzo
 	{
 		private Person WPerson;
 		private string confession;
-		private DateOnly TimeoConfession;
+		private int year;
+		private int month;
+		private int day;
 
-		public Witness(Person wPerson, string confession, DateOnly timeoConfession)
+
+		public Witness(Person wPerson, string confession, int year, int month, int day)
 		{
 			WPerson = wPerson;
 			this.confession = confession;
-			TimeoConfession = timeoConfession;
+			this.year = year;
+			this.month = month;
+			this.day = day;
 		}
 
 		public string Confession { get => confession; set => confession = value; }
-		public DateOnly TimeoConfession1 { get => TimeoConfession; set => TimeoConfession = value; }
+		public int Year { get => year; set => year = value; }
+		public int Month { get => month; set => month = value; }
+		public int Day { get => day; set => day = value; }
 		internal Person WPerson1 { get => WPerson; set => WPerson = value; }
+
+		public override string ToString()
+		{
+			return $"----------Vallomás-----------\n\t{this.WPerson}:\n\t vallomása:\n\t {this.confession}\n\t{this.year}.{this.month}.{this.day}";
+		}
 	}
 }

@@ -27,7 +27,7 @@ namespace Digit_nyomzo
 
 		public override string ToString()
 		{
-			return $"------------*Adatlap*-------------\n\t{this.nev}:\n\t{this.azonosito}\n\t{this.pozicio}";
+			return $"--------*Felhasználó fiok*---------\n\t{this.nev}:\n\t{this.azonosito}\n\t{this.pozicio}";
 		}
 	}
 }

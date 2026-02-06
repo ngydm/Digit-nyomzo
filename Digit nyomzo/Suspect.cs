@@ -22,5 +22,10 @@ namespace Digit_nyomzo
 		public int Suslvl { get => suslvl; set => suslvl = value; }
 		public string Statusz { get => statusz; set => statusz = value; }
 		internal Person Person { get => person; set => person = value; }
+
+		public override string ToString()
+		{
+			return $"--------*Adatlap*---------\n\t{this.suslvl}:\n\t{this.statusz}\n\t{this.person}";
+		}
 	}
 }

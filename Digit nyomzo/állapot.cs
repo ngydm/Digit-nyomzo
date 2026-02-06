@@ -9,6 +9,8 @@ namespace Digit_nyomzo
 	internal class állapot
 	{
 		private string statusz;
+
+
 	}
 
 

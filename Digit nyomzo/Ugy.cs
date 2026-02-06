@@ -15,14 +15,14 @@ namespace Digit_nyomzo
 		List<Felhasznalo> felhasznalok;
 		private List<Evidence> bizonyitékok;
 
-		public Ugy(int azonosito, string cim, string leiras, string allapot, List<Felhasznalo> felhasznalok, List<Evidence > bizonyitékok)
+		public Ugy(int azonosito, string cim, string leiras, string allapot)
 		{
 			this.azonosito = azonosito;
 			this.cim = cim;
 			this.leiras = leiras;
 			this.allapot = allapot;
-			this.felhasznalok = felhasznalok;
-			this.bizonyitékok = bizonyitékok;
+			this.felhasznalok = new List<Felhasznalo>();
+			this.bizonyitékok = new List<Evidence>();
 		}
 
 		public int Azonosito { get => azonosito; set => azonosito = value; }
@@ -31,6 +31,22 @@ namespace Digit_nyomzo
 		public string Allapot { get => allapot; set => allapot = value; }
 		public List<Evidence> Bizonyitékok { get => bizonyitékok; set => bizonyitékok = value; }
 		internal List<Felhasznalo> Felhasznalok { get => felhasznalok; set => felhasznalok = value; }
+
+		public void FelhasznaloHozzaadasa(Felhasznalo f)
+		{
+			felhasznalok.Add(f);
+		}
+
+		public void BizonyitekHozzaadasa(Evidence f)
+		{
+			bizonyitékok.Add(f);
+		}
+
+
+		public void CaseStatus(string ujallapot) 
+		{
+			this.Allapot = ujallapot;
+		}
 
 		public override string ToString()
 		{

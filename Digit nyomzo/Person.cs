@@ -22,5 +22,12 @@ namespace Digit_nyomzo
 		public string Name { get => name; set => name = value; }
 		public int Age { get => age; set => age = value; }
 		public string Note { get => note; set => note = value; }
+
+		public override string ToString()
+		{
+			return $"--( személyes adatok )--\n\t{this.name}:\n\t{this.Age}\n\t{this.Note}";
+		}
+
 	}
+
 }
